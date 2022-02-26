@@ -1,0 +1,156 @@
+.contract {
+  font-family: Poppins;
+  font-size:10px;
+}
+.contract .list-contract {
+  max-width: 1127px;
+  margin: 0 auto;
+}
+.contract {
+  min-height: 800px;
+  background-image: url('../img/man-hopdong.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contract .contract__title {
+  padding-top: 1.5rem;
+  padding-left: 0.5rem;
+}
+.contract .contract__title h3 {
+  font-size: 36px;
+  line-height: 54px;
+  padding-bottom: 27px;
+}
+.contract .contract__content {
+  padding: 17px 29px;
+  margin-bottom: 25px;
+  border: 1px solid #5fc8d7;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+}
+.contract__content .contract-item .line {
+  display: flex;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contract__content .contract-item .line > div {
+  padding:5px;
+}
+
+.contract__content .contract-item .line img {
+  max-width: 92px;
+}
+.contract__content .contract-item .line p {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+}
+.contract__content .contract-item .line .line-inner p {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 12px;
+}
+.contract__content .contract-item .line .line-inner img {
+  width: 121px;
+}
+.contract__content .contract-item .line .line-inner .text-blue {
+  color: #2fbbb2;
+}
+.contract__content .contract-item .line .drop-detail {
+  display: flex;
+}
+.contract__content .contract-item .line .drop-detail p {
+  font-size: 11px;
+  line-height: 14px;
+  margin-bottom:0px;
+}
+.contract__content .contract-item .line .drop-detail img {
+  width: 21px;
+  margin-right: 10px;
+}
+.contract__content .contract-item .line .btn {
+  font-size: 12px;
+  text-align: left;
+  position: relative;
+  padding:0.25rem 1.5rem;
+  background-color:#2FBBB2;
+  color: white;
+}
+.contract__content .contract-item .line .btn-error {
+  display:flex;
+  justify-content: space-between;
+  align-self:center;
+  align-items: center;
+  background-color: red;
+  padding:0.25rem 1rem;
+}
+
+@media (max-width: 576px) {
+    .contract__content .line {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contract__content .line >div {
+      width:100%;
+    }
+
+    .contract__content .contract-item .line .line-inner p {
+        font-size: 20px;
+    }
+
+}
+
+.contract__content .hiding {
+  display: none;
+}
+
+.contract-detail .detail-half {
+  min-height: 190px;
+  margin-top: 40px;
+}
+.contract-detail .detail-half .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #c6c2de;
+}
+.contract-detail .detail-half .title p {
+  color: #bb4738;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.detail-half .content .line-inner {
+  padding: 7px 0;
+}
+.detail-half .content .line-inner .row {
+  justify-content: space-between;
+}
+.detail-half .content .line-inner .inner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail-half .content .line-inner .inner-content .blue {
+  color: #197bbd;
+  font-weight: 600;
+}
+.detail-half .content .line-inner .inner-content .blue-thin {
+  color: #197bbd;
+  font-weight: 500;
+}
+
+.detail-half .content .line-inner .outhouse {
+  text-align: right;
+}
+.detail-half .content .line-inner .outhouse p {
+  width: 100%;
+}
