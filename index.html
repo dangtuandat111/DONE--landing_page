@@ -36,8 +36,8 @@
                         <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Liên hệ</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" style="padding:8px;">
-                        	<button type="button" class="btn-sm btn-header-right " data-dismiss="modal">Kiểm tra hợp đồng</button>
+                        <a href="contrac.html" class="nav-link" style="padding:8px;">
+                        	<button type="button" class="btn-sm btn-header-right" >Kiểm tra hợp đồng</button>
                        	</a>
                     </li>
                 </ul>
@@ -72,7 +72,7 @@
 
 	                    <div class="text-center text-md-left ">
 	                        <a  class="btn btn-header btn-right" target="_blank">
-	                            <span id="buttonBT" class="btn-inner--text" onclick="on('buttonBT')">Tìm kiếm hồ sơ bồi thường</span>
+	                            <span id="buttonBT" class="btn-inner--text" onclick="on('overlay5')">Tìm kiếm hồ sơ bồi thường</span>
 	                        </a>
 	                    </div>
                     </div>
@@ -388,7 +388,7 @@
                     hiểm tử kì
                   </button>
                 </div>
-                <div class="right-button">
+                <div class="right-button" style="padding:5px">
                 	 <img alt="Image placeholder" src="img/right-button.png"  style="height:80%;">
 
                 </div>
@@ -714,11 +714,11 @@
     	<div class="tracuu">
         	<div class="">
                     <div class="card">
+                    	<button class="btnclose" onclick="off('overlay4')">Close</button>
                         <div class="card-body">
                             <div>
                             	<div class="title">
 						            <h1 class="text-center">Tra cứu hợp đồng bảo hiểm</h1>
-						             <button class="btnclose" onclick="off('overlay4')">Close</button>
 						        </div>
                        	   </div>
                             <div>
@@ -728,8 +728,8 @@
 						    				<label class="form-control-label">Chọn sản phẩm bảo hiểm</label>
 						    			</div>
 						    			
-						                <div class="row" style="justify-content: space-between; width: 100%;">
-						                    <div class="col-12 col-md-12" >
+						                <div class="row row-form">
+						                    <div class="col-12 col-md-12" style="padding:0px">
 						                        <div class="input-group" >
 						                            <select class="form-control" name="gender" id="gender">
 													  <option value="Nam">SP1</option>
@@ -742,10 +742,10 @@
 						    				<label class="form-control-label">Nhập mã bảo hiểm hợp đồng/CMND/Serial</label>
 						    			</div>
 						    			
-						                <div class="row" style="justify-content: space-between; width: 100%;">
-						                    <div class="col-12 col-md-12" >
+						                <div class="row row-form" >
+						                    <div class="col-12 col-md-12" style="padding:0px">
 						                        <div class="input-group" >
-						                            <input type="email" class="form-control" id="input-telno" placeholder="">
+						                            <input type="email" class="form-control" id="input-telno" placeholder="Nhập mã bảo hiểm">
 						                        </div>
 						                    </div>
 						                </div>
@@ -753,10 +753,18 @@
 						    				<label class="form-control-label">Nhập số điện thoại</label>
 						    			</div>
 						    			
-						                <div class="row" style="justify-content: space-between; width: 100%;">
-						                    <div class="col-12 col-md-12" >
+						                <div class="row row-form">
+						                    <div class="col-12 col-md-12" style="padding:0px">
 						                        <div class="input-group" >
-						                            <input type="email" class="form-control" id="input-telno" placeholder="">
+						                            <input type="email" class="form-control" id="input-telno" placeholder="Nhập số điện thoại">
+						                        </div>
+						                    </div>
+						                </div>
+
+						                <div class="row row-form">
+						                    <div class="col-12 col-md-12" style="padding:0px">
+						                        <div class="input-group" style="justify-content: center;" >
+						                            <button type="button" class="btn btn-success">Tra cứu</button>
 						                        </div>
 						                    </div>
 						                </div>
@@ -767,7 +775,85 @@
                     </div>
                 </div>
     	</div>
-    	
+    </div>
+
+	<div class="overlayTraCuu modal" id="overlay5" class="wrapper">
+    	<div class="tracuu">
+        	<div class="">
+                    <div class="card" style="height:560px">
+                    	<button class="btnclose" onclick="off('overlay5')">Close</button>
+                        <div class="card-body">
+                            <div>
+                            	<div class="title">
+						            <h1 class="text-center">Tra cứu hồ sơ bồi thường</h1>
+						        </div>
+                       	   </div>
+                            <div>
+	                             <form>
+									<div class="row">
+						    			<div class="col-12 col-md-12 p-0">
+						    				<label class="form-control-label">Chọn sản phẩm bảo hiểm</label>
+						    			</div>
+						    			
+						                <div class="row row-form">
+						                    <div class="col-12 col-md-12" style="padding:0px">
+						                        <div class="input-group" >
+						                            <select class="form-control" name="gender" id="gender">
+													  <option value="Nam">SP1</option>
+													  <option value="Nu">SP2</option>
+													</select>
+						                        </div>
+						                    </div>
+						                </div>
+						                <div class="col-12 col-md-12 p-0 pt-2">
+						    				<label class="form-control-label">Nhập mã bảo hiểm hợp đồng/CMND/Serial</label>
+						    			</div>
+						    			
+						                <div class="row row-form" >
+						                    <div class="col-12 col-md-12" style="padding:0px">
+						                        <div class="input-group" >
+						                            <input type="email" class="form-control" id="input-telno" placeholder="Nhập mã bảo hiểm">
+						                        </div>
+						                    </div>
+						                </div>
+						                <div class="col-12 col-md-12 p-0 pt-2">
+						    				<label class="form-control-label">Nhập số điện thoại</label>
+						    			</div>
+						    			
+						                <div class="row row-form">
+						                    <div class="col-12 col-md-12" style="padding:0px">
+						                        <div class="input-group" >
+						                            <input type="email" class="form-control" id="input-telno" placeholder="Nhập số điện thoại">
+						                        </div>
+						                    </div>
+						                </div>
+
+						                <div class="col-12 col-md-12 p-0 pt-2">
+						    				<label class="form-control-label">Nhập số yêu cầu bối thường	</label>
+						    			</div>
+						    			
+						                <div class="row row-form">
+						                    <div class="col-12 col-md-12" style="padding:0px">
+						                        <div class="input-group" >
+						                            <input type="email" class="form-control" id="input-telno" placeholder="Nhập số điện thoại">
+						                        </div>
+						                    </div>
+						                </div>
+
+						                <div class="row row-form">
+						                    <div class="col-12 col-md-12" style="padding:0px">
+						                        <div class="input-group" style="justify-content: center;" >
+						                            <button type="button" class="btn btn-success">Tra cứu</button>
+						                        </div>
+						                    </div>
+						                </div>
+						            </div>
+						        </form>
+	                        </div>
+                        </div>
+                    </div>
+                </div>
+    	</div>
     </div>
 
 </body>

@@ -112,6 +112,13 @@
   align-items: flex-start;
 }
 
+.row-form {
+	justify-content: space-between;
+width: 100%;
+margin-right: 0px;
+    margin-left: 0px;
+}
+
 .slice {
 	height:auto ;
 }
@@ -258,6 +265,20 @@
   width: 80%;
 }
 
+.footer-dark .list-unstyled li a {
+	color:white;
+}
+
+.footer .list-unstyled li a:hover {
+	color:#2fbbb2;
+}
+
+.btn-success {
+	margin:10px 0px 10px 0px;
+	background-color: #2FBBB2;
+	width:60%;
+}
+
 
 .overlay {
   position: fixed;
@@ -391,7 +412,7 @@
     .tracuu .card
     {
        width: 472px;
-    	height: 449px;
+    	height: 460px;
     }
 }
 
@@ -412,4 +433,8 @@
 .btnclose {
 	border:none;
 	background-color: inherit;
+	text-align: right;
+	border-top-left-radius: 0.75rem;
+	border-top-right-radius: 0.75rem;
+
 }
