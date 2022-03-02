@@ -1,5 +1,5 @@
 // A URL returns TEXT data.
-var url = "http://27.74.249.62:10000/api/esb/admin/search-contract/phone=0356630582&id=xxx";
+var url = "https://27.74.249.62:10000/api/esb/admin/search-contract/phone=0356630582&id=xxx";
 
 if (localStorage.getItem("data") !== null) {
     var data = JSON.parse(localStorage.getItem('data'));
