@@ -68,56 +68,47 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-              <div class="form-item">
-                <span
-                  >Chọn sản phẩm bảo hiểm
-                  <img src="./assets/img/modal/infomation.svg" alt=""
-                /></span>
-                <select name="" id="">
-                  <option value="">Bảo hiểm tử kỳ</option>
-                  <option value="">Bảo hiểm sức khỏe</option>
-                  <option value="">Bảo hiểm du lịch quốc tế</option>
-                  <option value="">Bảo hiểm du lịch nội địa</option>
-                  <option value="">Bảo hiểm tai nạn</option>
-                </select>
-              </div>
-              <div class="form-item">
-                <span
-                  >Nhập mã hợp đồng/CMND/Serial
-                  <img src="./assets/img/modal/infomation.svg" alt=""
-                /></span>
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Nhập mã hợp đồng/CMND/Serial"
-                />
-              </div>
-              <div class="form-item">
-                <span
-                  >Nhập số điện thoại đăng ký
-                  <img src="./assets/img/modal/infomation.svg" alt=""
-                /></span>
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Nhập số điện thoại của bạn"
-                />
-              </div>
+            <div class="modal-body" >
+              <form class="form-group" >
+                <div class="form-item">
+                  <span
+                    >Nhập mã hợp đồng/CMND/Serial
+                    <img src="./assets/img/modal/infomation.svg" alt=""
+                  /></span>
+                  <input
+                    type="text"
+                    name="mahopdong"
+                    id="form_id"
+                    placeholder="Nhập mã hợp đồng/CMND/Serial"
+                  />
+                </div>
+                <div class="form-item">
+                  <span
+                    >Nhập số điện thoại đăng ký
+                    <img src="./assets/img/modal/infomation.svg" alt=""
+                  /></span>
+                  <input
+                    type="text"
+                    name="phone"
+                    id="form_telno"
+                    placeholder="Nhập số điện thoại của bạn"
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn"
+                    data-toggle="modal"
+                    data-dismiss="modal"
+                    data-target="#exampleNotFound"
+                    onclick="doGetTEXT()"
+                  >
+                    Tra cứu
+                  </button>
+                </div>
+              </form>
             </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn"
-                data-toggle="modal"
-                data-dismiss="modal"
-                data-target="#exampleNotFound"
-              >
-                Tra cứu
-              </button>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -815,9 +806,9 @@
                 <a href="index.html">Trang chủ</a>
                 <a href="">Liên hệ</a>
                 <button
-                  data-toggle="modal"
-                  data-target="#exampleSearch"
                   class="btn search-btn"
+                  data-toggle="modal"
+                  data-target="#exampleContract"
                 >
                   <img src="./assets/img/home/search.svg" alt="" /> Kiểm tra hợp
                   đồng
@@ -909,8 +900,6 @@
                     lãnh viện phí toàn quốc. Chi trả
                   </p>
                   <a href="">Mua bảo hiểm</a>
-                  <!-- <div class="buy-product">
-                  </div> -->
                 </div>
               </div>
               <div class="col-lg-4 col-md-6 col-12">
@@ -1115,7 +1104,7 @@
             <div class="row">
               <div class="col-lg-6 col-md-12 col-12 center">
                 <div class="list-option">
-                  <button class="btn selected">
+                  <button class="btn">
                     <img src="./assets/img/home/suc-khoe-white.png" alt="" />
                     Bảo hiểm sức khỏe
                   </button>
@@ -1230,13 +1219,13 @@
                 <div class="footer-box">
                   <h4>Chính sách sử dụng</h4>
                   <a data-toggle="modal" data-target="#modalTerms">
-                    Term of use
+                    Điều khoản sử dụng
                   </h4>
                   <a data-toggle="modal" data-target="#modalSecurity"
-                    >Security Policy</a
+                    >Chính sách bảo mật</a
                   >
                   <a data-toggle="modal" data-target="#modalPrivacy"
-                    >Privacy Policy
+                    >Quyền riêng tư
                   </a>
                   <ul class="box-icon">
                     <li>
@@ -1305,5 +1294,6 @@
     ></script>
     <!-- ---owl--- -->
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/api.js"></script>
   </body>
 </html>
