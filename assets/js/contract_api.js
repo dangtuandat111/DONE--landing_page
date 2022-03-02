@@ -22,6 +22,7 @@ function doGetTEXT()  {
                 console.log(data);
                 localStorage.removeItem("data");
                 localStorage.setItem("data", data );
+                location.reload();
           })
           .catch(function(error) {
              // Never happened.
@@ -38,14 +39,13 @@ function showData(data) {
     var qrcode_list = [];
     let myPromise = new Promise(function(resolve, reject) {
         data.forEach(function(item) {
-            var now = Date.now();
-            var newChild = '';
-            var status = '';
+            let now = Date.now();
+            let newChild = '';
+            let status = '';
             console.log(item);
             console.log(item['fromDate']+" : "+item["toDate"]);
-            var fromDate = new Date(item['fromDate']);
-            var toDate = new Date(item['toDate']);
-
+            let fromDate = new Date(item['fromDate']);
+            let toDate = new Date(item['toDate']);
             if(fromDate> now) {
                 status = 'Chưa đến hiệu lực'
             }
@@ -55,9 +55,11 @@ function showData(data) {
             else {
                 status = "Hết hiệu lực"
             }
-            var fromDate = item['fromDate'];
-            var toDate = item["toDate"];
-            if ( status == 'Chưa đến hiệu lực' ||  status == 'Còn hiệu lực') {
+             fromDate = item['fromDate'].split('-');
+             fromDate = fromDate[2] + '-'  + fromDate[1] + '-' + fromDate[0] ;
+             toDate = item['toDate'].split('-');
+             toDate = toDate[2] + '-'  + toDate[1] + '-' + toDate[0] ;
+            if ( (status == 'Chưa đến hiệu lực' ||  status == 'Còn hiệu lực') && item['effectInsurance'] != 'CANCEL' ){
                 var qrcode_id = 'qrcode' + Date.now();
                 qrcode_list.push(qrcode_id);
                 newChild = 
@@ -112,7 +114,7 @@ function showData(data) {
                                 <p class="text-blue">
                                     <strong> ` + status +` </strong>
                                     <br />
-                                    Từ ` + fromDate +` đến ` + toDate +`
+                                    Từ ` + fromDate +` <br> đến ` + toDate +`
                                 </p>
                                 </div>
                                 <div class="line-inner">
@@ -481,7 +483,7 @@ function showData(data) {
                     `
             }
             else {
-                var status2 = (status == 'Hết hiệu lực' ? 'Expired' : 'Canceled');
+                var status2 = item['effectInsurance'] == 'CANCEL' ? 'Bị Hủy' : 'Hết hiệu lực';
                 newChild = 
                 `
                 <div class="contract__content">
@@ -554,7 +556,7 @@ function showData(data) {
         });
         resolve(qrcode_list);
     });
-
+    console.log(qrcode_list);
     myPromise.then(
         function(value) {  
             console.log(value);
