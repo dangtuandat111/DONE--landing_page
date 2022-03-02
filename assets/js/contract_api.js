@@ -1,5 +1,5 @@
 // A URL returns TEXT data.
-var url = "https://27.74.249.62:10000/api/esb/admin/search-contract/phone=0356630582&id=xxx";
+var url = "http://27.74.249.62:10000/api/esb/admin/search-contract/phone=0356630582&id=xxx";
 
 if (localStorage.getItem("data") !== null) {
     var data = JSON.parse(localStorage.getItem('data'));
@@ -8,8 +8,11 @@ if (localStorage.getItem("data") !== null) {
 }
 
 function doGetTEXT()  {
-  var aPromise = fetch(url);
-  aPromise
+    var id = document.getElementById("form_id").value;
+    var phone = document.getElementById("form_telno").value;
+    url = "http://27.74.249.62:10000/api/esb/admin/search-contract/phone="+phone+"&id="+id;
+    var aPromise = fetch(url);
+    aPromise
     .then(function(response) {
         console.log("OK! Server returns a response object:");
         console.log(response);
