@@ -7,7 +7,7 @@ function doGetTEXT()  {
     var id = document.getElementById("form_id").value;
     var phone = document.getElementById("form_telno").value;
     // match URL
-    url = "http://27.74.249.62:10000/api/esb/admin/search-contract/phone="+phone+"&id="+id;
+    url = "https://27.74.249.62:10000/api/esb/admin/search-contract/phone="+phone+"&id="+id;
     // Get data from URL
     var aPromise = fetch(url);
     aPromise.then(function(response) {
