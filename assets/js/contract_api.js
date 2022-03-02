@@ -585,6 +585,5 @@ function formatMoney(str) {
         return ((index % 3) ? next : (next + ',')) + prev 
     }) + ' VND';
 }
-console.log(formatCash('66000')) 
 
 
