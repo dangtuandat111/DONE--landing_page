@@ -580,5 +580,11 @@ function myFunction(qrcode) {
     });
 }
 
+function formatMoney(str) {
+    return str.split('').reverse().reduce((prev, next, index) => {
+        return ((index % 3) ? next : (next + ',')) + prev 
+    }) + ' VND';
+}
+console.log(formatCash('66000')) 
 
 
